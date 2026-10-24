@@ -68,8 +68,7 @@ INSERT INTO @CfgServicios VALUES
 
 DECLARE @CfgCargos TABLE (Nombre VARCHAR(60) NOT NULL, Orden INT NOT NULL);
 INSERT INTO @CfgCargos VALUES
-('Conductor',1),('Personal',2),('Almacén',3),('Administración',4);
-insert into Cargo values('Gerente General'); 
+('Conductor',1),('Personal',2),('Almacén',3),('Administración',4),('Gerente General',5);
 
 DECLARE @CfgTiposVehiculo TABLE
 (
@@ -275,7 +274,7 @@ BEGIN
         SET @iEmp+=1;
     END
 END;
-insert Empleado values('Janpier', 'Mauricio', CONVERT(DATETIME,'20000101',112), 9, 25)
+insert Empleado values('Gerente', 'Generalio', CONVERT(DATETIME,'20000101',112), 9, 25)
 
 IF NOT EXISTS (SELECT 1 FROM Conductor)
 BEGIN
